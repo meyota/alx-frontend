@@ -386,12 +386,17 @@
   }
 
   .header .menu-btn:checked ~ .menu-icon .navicon::before {
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
   }
 
   .header .menu-btn:checked ~ .menu-icon .navicon::after {
-    top: 0;
+    transform: rotate(45deg);
   }
+
+  .header .menu-btn:checked ~ .menu-icon .navicon::before,
+  .header .menu-btn:checked ~ .menu-icon .navicon::after {
+    top: 0;
+}
 
   @media screen and (max-width: 767px) {
     :root {
